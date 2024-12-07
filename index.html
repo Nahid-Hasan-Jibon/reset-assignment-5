@@ -8,10 +8,10 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header class="  w-full ">
+    <header class="  w-full fixed top-0 ">
         <nav class="flex justify-around pt-5 pb-5 bg-[#F9F7F3;]">
             <div>
-                <button class="btn">Blog</button>
+                <button id="blog-btn" class="btn">Blog</button>
             </div>
             <div class="flex items-center gap-3">
                 <img src="assets/coin.png" alt="">
@@ -19,18 +19,18 @@
             </div>
             <div class="flex items-center gap-3">
                 <img src="assets/coin.png" alt="">
-                <p> <span>5500</span> BDT</p>
+                <p> <span id="current-balance">5500</span> BDT</p>
             </div>
         </nav>
 
         <!-- Banner section -->
          <div class="flex justify-center gap-10 p-10 bg-[#1111111A]">
-            <div class="btn">Donation</div>
-            <div class="btn">History</div>
+            <div id="donation-btn" class="btn ">Donation</div>
+            <div id="history-btn" class="btn ">History</div>
          </div>
 
     </header>
-    <main>
+    <main class="pt-96">
         <!-- 1st card starts -->
         <div class=" bg-base-200 rounded m-20 ">
             <div class=" flex items-center gap-20 p-12 flex-col lg:flex-row">
@@ -41,15 +41,34 @@
               
                 <div class="flex justify-center items-center bg-gray-50 gap-2 w-24 h-12">
                     <img src="assets/coin.png" alt="">
-                    <p><span>0</span>BDT</p>
+                    <p><span id="current-donation">0</span>BDT</p>
                 </div>
                 <h1 class="text-5xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
                 <p class="">
                     The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
                 </p>
-                <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" /> <br>
+                <input id="input-1" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" /> <br>
 
-                <button class="btn btn-primary">Donate Now</button>
+                <button id="donate-btn" class="btn btn-primary" onclick="my_modal_1.close()"  >Donate Now</button>
+
+                <dialog id="my_modal_1" class="modal">
+                    <div class="modal-box">
+                      <h3 class="text-lg font-bold">Hello!</h3>
+                      <p class="py-4">Press ESC key or click the button below to close</p>
+                      <div class="modal-action">
+                        <form method="dialog">
+                          <!-- if there is a button in form, it will close the modal -->
+                          <button class="btn">Close</button>
+                        </form>
+                      </div>
+                    </div>
+                  </dialog>
+
+                <!-- Open the modal using ID.showModal() method -->
+
+
+
+
               </div>
             </div>
           </div>
@@ -62,8 +81,11 @@
 
     </footer>
 
-
-    <script src="js/utility.js"></script>
+    
+    <script src="js/toggle.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/utility.js"></script>
+    
+    
 </body>
 </html>

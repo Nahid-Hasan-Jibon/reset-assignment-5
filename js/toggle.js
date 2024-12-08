@@ -1,23 +1,23 @@
 
+
+
+document.getElementById('donation-btn').addEventListener('click', function(){
+    toggleSectionById('home-section')
+})
+
+
 document.getElementById('history-btn').addEventListener('click', function(){
-    window.location.href='/history.html'
-    document.getElementById('history-btn').classList.add='bg-green-500'
+    toggleSectionById('history-section')
+    
     
 })
 
-document.getElementById('donation-btn').addEventListener('click', function(){
-    window.location.href='/index.html'
-})
-
-
-document.getElementById('blog-btn').addEventListener('click', function(){
-    window.location.href='/blog.html'
-})
-
-document.getElementById('go-home').addEventListener('click', function(){
-   
-    window.location.href='/index.html'
-})
 
 
 
+
+
+
+
+ 
+ 

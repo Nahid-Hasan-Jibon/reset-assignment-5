@@ -24,19 +24,24 @@ document.getElementById('donate-btn').addEventListener('click',function(event){
 
     
 
-    const showCurrentTime=new Date().toLocaleTimeString()
+    // const showCurrentTime=new Date().toLocaleTimeString()
+
+    // const currentDate = new Date().toLocaleDateString()
+
+    const now =new Date();
+    const options = {weekday:'long', year:'numeric',month:'long', day:'numeric'}
+    const currentDate =now.toLocaleDateString(undefined,options)
+    const showCurrentTime=now.toLocaleTimeString()
+    
 
     // add to history section
 
-    // const div= document.createElement('div')
-    // div.innerText= `${inputValue} BDT  is donated for ${place}  `
-    // document.getElementById('history-container').appendChild(div)
     const div= document.createElement('div')
     div.innerHTML= `
     <div class="border-2 rounded-lg m-20 ">
          <div class="p-6">
           <p class="text-2xl font-bold">${inputValue} Taka is Donated for ${place}, Bangladesh</p>
-        <p class="text-[#111111b3] mt-3">Date : ${showCurrentTime} (Bangladesh Standard Time)</p>
+        <p class="text-[#111111b3] mt-3">Date :${currentDate} ${showCurrentTime}   GMT +0600(Bangladesh Standard Time)</p>
          </div>
       </div>
      `

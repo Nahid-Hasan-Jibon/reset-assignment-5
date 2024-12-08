@@ -8,8 +8,8 @@
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <header class="  w-full fixed top-0 ">
-        <nav class="flex justify-around pt-5 pb-5 bg-[#F9F7F3;]">
+    <header class="  w-full sticky top-0 z-10 ">
+        <nav class="flex justify-around pt-5 pb-5 bg-[#F9F7F3;] ">
             <div>
                 <button id="blog-btn" class="btn">Blog</button>
             </div>
@@ -24,43 +24,49 @@
         </nav>
 
         <!-- Banner section -->
-         <div class="flex justify-center gap-10 p-10 bg-[#1111111A]">
-            <div id="donation-btn" class="btn ">Donation</div>
-            <div id="history-btn" class="btn ">History</div>
+         <div class="flex justify-center gap-10 p-10 bg-[#1111111A] shadow-md">
+            <div id="donation-btn" class="btn  ">Donation</div>
+            <div id="history-btn" class=" btn">History</div>
          </div>
 
     </header>
-    <main class="pt-96">
+    <main class=" flex-1 overflow-y-auto">
         
       <section id="home-section" class="">
-        <!-- 1st card starts -->
-        <div class=" bg-base-200 rounded m-20 ">
-          <div class=" flex items-center gap-20 p-12 flex-col lg:flex-row">
+        <div class=" px-4  lg:px-64 lg:py-12">
+          <!-- 1st card starts -->
+        <div class=" border rounded-3xl   ">
+          <div class="  flex items-center justify-center gap- py-16  flex-col lg:flex-row">
+         
               
-            <img
+            <div class=" w-full lg:w-1/2" >
+              <img class=" px-2"
               src="assets/noakhali.png" />
-              <div>
+            </div>
+              <div class="px-2 mt-3">
             
-              <div class="flex justify-center items-center bg-gray-50 gap-2 w-24 h-12">
+              <div class="flex justify-center items-center bg-gray-50 gap-2 w-24 h-12 rounded-lg  ">
                   <img src="assets/coin.png" alt="">
-                  <p><span id="current-donation">0</span>BDT</p>
+                  <p class=""><span id="current-donation">0</span>BDT</p>
               </div>
-              <h1 class="text-5xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
-              <p class="">
-                  The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+              <h1 id="card-heading" class="text-2xl font-bold mt-3">Donate for <span id="place"> Flood at Noakhali</span> , Bangladesh</h1>
+              <p class="mt-3 text-[#111111b3] w-100% ">
+                  The recent floods in Noakhali have caused significant damage <br> to homes  infrastructure. Your donation will help provide essential <br> supplies and  to those affected by this disaster. Every contribution, <br> big or small, makes  difference. Please join us in supporting the relief <br> efforts and making a positive impact on the lives of those in need.
               </p>
-              <input id="input-1" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" /> <br>
+              <input id="input-1" type="text" placeholder="Write Donation Amount" class="input input-bordered   mt-3 lg:w-96 " /> <br>
 
-              <button id="donate-btn" class="btn btn-primary" onclick="my_modal_1.close()"  >Donate Now</button>
+              <button id="donate-btn" class="btn bg-[#B4F461] text-xl mt-3 lg:w-96" onclick="my_modal_1.close()"  >Donate Now</button>
 
-              <dialog id="my_modal_1" class="modal">
+              <dialog id="my_modal_1" class="modal text-center">
                   <div class="modal-box">
-                    <h3 class="text-lg font-bold">Hello!</h3>
-                    <p class="py-4">Press ESC key or click the button below to close</p>
-                    <div class="modal-action">
+                    <h3 class="text-lg font-bold">Congratulations !</h3>
+                    <div class="flex justify-center"><img src="assets/coin.png" alt=""></div>
+                    <p class="py-4">You Have Donated Humankind</p>
+                    <p class="py-4">Successfully</p>
+                    <div class="modal-action flex justify-center">
                       <form method="dialog">
                         <!-- if there is a button in form, it will close the modal -->
-                        <button class="btn">Close</button>
+                        <button class="btn  ">Close confirmation</button>
                       </form>
                     </div>
                   </div>
@@ -75,15 +81,21 @@
           </div>
         </div>
       <!-- 1st card ends -->
+        </div>
       </section>
 
        <!-- history section -->
-        <section id="history-section" class="">
-          <div> i am history</div>
+        <section id="history-section" class=" hidden">
+          
+          <div id="history-container">
+
+          </div>
         </section>
 
     </main>
     <footer>
+
+      
 
     </footer>
 

@@ -1,17 +1,17 @@
 
 
 function getInputFieldValueByID(id){
-    const inputValue =document.getElementById(id).value
-    const inputValueNumber=parseFloat(inputValue)
-    return inputValueNumber
+    const donationValue =document.getElementById(id).value
+    const donationValueNumber=parseFloat(donationValue )
+    return donationValueNumber
 
 }
 
 function getTextFieldValueByID(id){
-    const textValue =document.getElementById(id).innerText
-    const textNumber=parseFloat(textValue)
+    const balanceTextValue =document.getElementById(id).innerText
+    const balanceTextNumber=parseFloat(balanceTextValue)
     
-    return textNumber
+    return balanceTextNumber
 
 }
 
